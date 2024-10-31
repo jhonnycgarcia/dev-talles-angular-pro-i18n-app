@@ -31,3 +31,4 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 `https://angular.dev/guide/i18n`
 `https://gist.github.com/Klerith/b2683068a99ab9e34960fb06159830e1`
 `https://www.npmjs.com/package/ngx-cookie-service-ssr`
+`https://import.cdn.thinkific.com/643563/ITt5gZWFSnioHSpvio0q_lang-files.zip`
