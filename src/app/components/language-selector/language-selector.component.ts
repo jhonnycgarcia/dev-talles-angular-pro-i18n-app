@@ -15,6 +15,7 @@ export class LanguageSelectorComponent {
 
   private languageSrv = inject(LanguageService);
   public languages = computed(() => this.languageSrv.languages());
+  public currentLang = computed(() => this.languageSrv.currentLange());
 
   onChangeLanguage(e: Event){
     const target = e.target as HTMLSelectElement;
