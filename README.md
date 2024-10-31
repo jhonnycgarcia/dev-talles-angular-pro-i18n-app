@@ -25,3 +25,8 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+
+`https://www.creative-tim.com/twcomponents/component/magic-ai-blocks-pricing-table`
+`https://github.com/ngx-translate/core`
+`https://angular.dev/guide/i18n`
+`https://gist.github.com/Klerith/b2683068a99ab9e34960fb06159830e1`
