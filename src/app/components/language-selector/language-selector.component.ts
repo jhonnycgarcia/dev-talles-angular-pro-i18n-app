@@ -1,12 +1,14 @@
 import { CommonModule } from '@angular/common';
 import { ChangeDetectionStrategy, Component, computed, inject, signal } from '@angular/core';
 import { LanguageService } from '../../services/language.service';
+import { TranslateModule } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-language-selector',
   standalone: true,
   imports: [
     CommonModule,
+    TranslateModule,
   ],
   templateUrl: './language-selector.component.html',
   changeDetection: ChangeDetectionStrategy.OnPush,

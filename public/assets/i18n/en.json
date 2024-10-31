@@ -10,7 +10,10 @@
       "perMonth": "per month",
       "join": "Join",
       "online-ordering": "Online Ordering",
-      "limited-support": "Limited Support"
+      "limited-support": "Limited Support",
+      "support": "support",
+      "special-events-access": "Special events access",
+      "personal-chef-consultation": "Personal chef consultation"
     },
     "basic": {
       "name": "Basic Plan",
