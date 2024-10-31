@@ -1,5 +1,6 @@
 import { CommonModule } from '@angular/common';
-import { ChangeDetectionStrategy, Component, signal } from '@angular/core';
+import { ChangeDetectionStrategy, Component, computed, inject, signal } from '@angular/core';
+import { LanguageService } from '../../services/language.service';
 
 @Component({
   selector: 'app-language-selector',
@@ -12,11 +13,13 @@ import { ChangeDetectionStrategy, Component, signal } from '@angular/core';
 })
 export class LanguageSelectorComponent {
 
-  public languages = signal([
-    { code: 'en', flag: '🇺🇸' },
-    { code: 'es', flag: '🇪🇸' },
-    { code: 'fr', flag: '🇫🇷' },
-    { code: 'it', flag: '🇮🇹' },
-  ]);
+  private languageSrv = inject(LanguageService);
+  public languages = computed(() => this.languageSrv.languages());
+
+  onChangeLanguage(e: Event){
+    const target = e.target as HTMLSelectElement;
+    const lang = target.value;
+    this.languageSrv.changeLanguage(lang);
+  }
 
 }
