@@ -30,7 +30,9 @@ export function app(): express.Express {
   server.get('**', (req, res, next) => {
     const { protocol, originalUrl, baseUrl, headers } = req;
 
-    const lang = 'Español';
+    const cookies = headers['cookie'] ? headers['cookie'].split(';') : [];
+    const langCookie = cookies.find(cookie => cookie.startsWith('lang=')) ?? 'lang=en';
+    const [,lang] = langCookie.split('=');
     console.log({ lang });
 
     commonEngine

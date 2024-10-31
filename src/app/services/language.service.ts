@@ -1,4 +1,4 @@
-import { computed, inject, Injectable, InjectionToken, signal } from '@angular/core';
+import { computed, inject, Injectable, InjectFlags, InjectionToken, signal } from '@angular/core';
 import { TranslateService } from '@ngx-translate/core';
 import { SsrCookieService } from 'ngx-cookie-service-ssr';
 
@@ -16,12 +16,12 @@ export class LanguageService {
     { code: 'it', flag: '🇮🇹' },
   ]);
 
-  public currentLange = signal<string>('');
-
-
   private cookie = inject(SsrCookieService);
   private translate = inject(TranslateService);
 
+  langServer = inject(SERVER_LANG_TOKEN, InjectFlags.Optional);
+
+  public currentLange = signal<string>(this.langServer ?? 'en');
 
   changeLanguage(lang: string) {
     console.log({ lang });
